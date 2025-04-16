@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.img5{
+			transition: 1s;
+			top: 300px;
+			left: 50px;
+		}
+	</style>
+</head>
+<body>
+	<img src="up.png" class="img1" style="width: 70px; height: 70px; margin-left: 75px;">
+	<div style="display: flex;">
+		<img src="left.png" class="img2" style="width: 70px; height: 70px;">
+		<img src="down.png" class="img3" style="width: 70px; height: 70px; margin-left: 5px;">
+		<img src="right.png" class="img4" style="width: 70px; height: 70px; margin-left: 5px;">
+	</div>
+	<img src="sprite.png" class="img5">
+	<script>
+		//8. Управляй бойцом, используя стрелки. 
+		let x = 0
+		let y = 0
+
+		document.querySelector(".img1").onclick = function(){
+			y = y - 50;
+			document.querySelector(".img5").style.marginTop = y + "px";
+		}
+		document.querySelector(".img3").onclick = function(){
+			y = y + 50;
+			document.querySelector(".img5").style.marginTop = y + "px";
+		}
+		document.querySelector(".img2").onclick = function(){
+			x = x - 50;
+			document.querySelector(".img5").style.marginLeft = x + "px";
+		}
+		document.querySelector(".img4").onclick = function(){
+			x = x + 50;
+			document.querySelector(".img5").style.marginLeft = x + "px";
+		}
+
+	</script>
+</body> 
+</html>
